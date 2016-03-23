@@ -1,0 +1,50 @@
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Weather App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css"/>
+    <style>
+      html, body, input, select, textarea
+      {
+        font-size: 1.05em !important;
+      }
+      *
+      {
+        margin: 0px;
+	      padding: 0px;
+      }
+    </style>
+
+    <!-- Angular -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-route.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-resource.min.js"></script>
+      <script src="app.js"></script>
+      <script src="routes.js"></script>
+      <script src="services.js"></script>
+      <script src="controllers.js"></script>
+      <script src="directives.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/">Weather App</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/"><i class="fa fa-home"></i>Home</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+      <div class="container">
+        <div ng-view=""></div>
+      </div>
+  </body>
+</html>
