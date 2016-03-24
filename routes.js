@@ -1,7 +1,5 @@
-myApp.config(function ($routeProvider) {
-
+myApp.config(['$routeProvider', function ($routeProvider){
   $routeProvider
-
   .when('/', {
     templateUrl: 'views/home.html',
     controller: 'homeController'
@@ -14,5 +12,8 @@ myApp.config(function ($routeProvider) {
     templateUrl: 'views/forecast.html',
     controller: 'forecastController'
   })
+  .otherwise({
+    redirectTo: '/'
+  });
 
-});
+}]);
